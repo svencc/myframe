@@ -1,0 +1,9 @@
+{
+    "require": {
+        "monolog/monolog": "1.11.*",
+        "phpunit/phpunit": "4.3.*",
+        "phpunit/phpunit-mock-objects": "2.3.*",
+        "symfony/yaml": "2.5.*",
+        "doctrine/orm": "2.3.6"
+    }
+}
