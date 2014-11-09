@@ -7,6 +7,8 @@ database:
     password : greyface_password
     #The database name of sqlgrey
     dbName : greyface
+    #The database name of sqlgrey
+    dbDriver : pdo_mysql
 
 error:
     # Defines if the error logging to /Greyface/log/greyface.log should be activated

@@ -3,34 +3,23 @@
     ini_set('display_errors', 1);
     
     ###################################################
-    ## AUTOLOADER
+    ## Get the source path
     ###################################################
-    // require the autoloader
-    require('Psr4AutoloaderClass.php');
-    
     // get the src path
     $srcPath = __DIR__;
- 
-    // instantiate the loader
-    $loader = new \Psr4AutoloaderClass();
-
-    // register the autoloader
-    $loader->register();
- 
-    // register the base directories for the namespace prefix
-    $loader->addNamespace('Greyface', $srcPath.'/classes');
-    $loader->addNamespace('Test', $srcPath.'/tests');
-    $loader->addNamespace('Symfony', $srcPath.'/../vendor/symfony/yaml/Symfony');
-    $loader->addNamespace('Doctrine', $srcPath.'/../vendor/doctrine');
-
-//require '/path/to/doctrine/lib/Doctrine/Common/ClassLoader.php';
-
+    
+    ###################################################
+    ## AUTOLOADER
+    ###################################################
+    // require the autoloaders
+    require_once "../vendor/autoload.php";
 
     ###################################################
     ## CONFIGURATION
     ###################################################
-    $configPath = __DIR__.'/local_config.yaml';
-    \Greyface\Configuration\Configurator::readConfiguration($configPath);
+    $configPath = __DIR__.'/local_config.yaml';    
+    
+    Myframe\Configuration\Configurator::readConfiguration($configPath);
 
     ###################################################
     ## ERROR HANDLER / LOGGING
@@ -62,7 +51,7 @@
     
     
     
-    
+echo 'hello';    
 //    // aäösdf#äaösdf
 //    $money = new Greyface\Money(5);
 //    echo $money->getAmount() ."\n";

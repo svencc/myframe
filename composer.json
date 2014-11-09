@@ -1,5 +1,11 @@
 {
+    "name": "svencc/myframe",
+    "description": "This is Myframe - a small php framework",
+    "autoload": {
+        "psr-4": {"Myframe\\": "src/"}
+    },
     "require": {
+        "php": ">=5.5.9",
         "monolog/monolog": "1.11.*",
         "phpunit/phpunit": "4.3.*",
         "phpunit/phpunit-mock-objects": "2.3.*",
